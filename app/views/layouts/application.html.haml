@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Kate App"
+    %meta{:content => "#{content_for?(:description) ? yield(:description) : "Kate App"}", :name => "description"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = csrf_meta_tags
+    = favicon_link_tag asset_path('favicon.ico')
+  %body
+    %main{:role => "main"}
+      = render 'shared/header'
+      = yield
+      = render 'shared/footer'

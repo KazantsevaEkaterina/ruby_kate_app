@@ -1,0 +1,16 @@
+/ <footer class="footerList">
+/ By Kate
+/ </footer>
+%footer
+  .container
+    .footer-col
+      %span By Kate 2021
+    .footer-col
+      .social-bar-wrap
+        %a= link_to 'Users', users_path
+        %a= link_to 'Images', images_path
+        %a= link_to 'Themes', themes_path
+:javascript
+  $('.nav-toggle').on('click', function(){
+      $('#menu').toggleClass('active');
+  });
