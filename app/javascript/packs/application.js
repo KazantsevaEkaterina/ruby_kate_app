@@ -12,4 +12,5 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+global.Rails = Rails;
 

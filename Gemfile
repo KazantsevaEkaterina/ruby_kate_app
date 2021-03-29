@@ -28,11 +28,13 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'jquery-rails'
-gem 'rails-asset-jqueryui'
 
-gem 'bootstrap-sass'
+
+# 'gem 'bootstrap-sass
 gem "font-awesome-rails"
+gem 'bootstrap', '~> 5.0.0.beta2'
+gem 'font-awesome-sass' #, '~> 4.6.2'
+
 
 gem 'flash'
 
@@ -81,5 +83,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'jquery-ui-rails'
+gem 'jquery-rails'
+
+gem 'rails-asset-jqueryui'
 
 gem 'haml-rails'

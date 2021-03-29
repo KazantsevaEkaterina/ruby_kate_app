@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'work#index'
+
   get 'work/index'
   get 'work/choose_theme'
   get 'work/display_theme'
@@ -14,9 +16,10 @@ Rails.application.routes.draw do
   #
   # work
 
-  match 'work',                  to: 'work#index',                  via: 'get'
-  match 'choose_theme',     to: 'work#choose_theme',      via: :get
-  match 'display_theme',    to: 'work#display_theme',      via: :post
-  root 'work#index'
+  match 'work', to: 'work#index', via: 'get'
+  match 'choose_image', to: 'work#choose_image', via: :get
+  match 'choose_theme', to: 'work#choose_theme', via: :get
+  match 'display_theme', to: 'work#display_theme', via: :post
+
   #root 'main#index'
 end
