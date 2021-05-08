@@ -52,4 +52,15 @@ module WorkImage
     logger.info "In show_image:  data = #{data.inspect} "
     data
   end
+  def next_index(index, length)
+    new_index = index
+    index < length-1 ? new_index += 1 : new_index = 0
+    new_index
+  end
+
+  def prev_index(index, length)
+    new_index = index
+    index > 0 ? new_index -= 1 : new_index = length-1
+    new_index
+  end
 end
